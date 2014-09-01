@@ -1,0 +1,21 @@
+<ui:composition template="../resources/templates/generic.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="pageContent">
+        <p:panel id="loginPanel">
+            <h:panelGrid columns="2">
+                <p:watermark value="Email" for="email"/>
+                <p:inputText id="email"/>
+                <p:watermark value="Senha" for="password"/>
+                <p:password id="password"/>
+            </h:panelGrid>
+            <h:panelGrid columns="2">
+                <p:commandButton id="loginBtn" value="Acessar" ajax="false"/>
+                <p:commandLink id="recoverBtn" value="Recuperar Senha" ajax="false"/>
+            </h:panelGrid>
+        </p:panel>
+    </ui:define>
+</ui:composition>
